@@ -1231,6 +1231,14 @@ BeepAtStart = 1
 FlashAtStart = 1
 
 #
+#    HourlyBells
+#        Description: Enable or disable HourlyBells event.
+#        Default:     1 - (Enabled)
+#                     0 - (Disabled)
+
+HourlyBells = 1
+
+#
 #    Motd
 #        Description: Message of the Day, displayed at login. Use '@' for a newline.
 #        Example:     "Welcome to John's Server!@This server is proud to be powered by Trinity Core."

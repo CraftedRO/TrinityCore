@@ -46,6 +46,7 @@ EndContentData */
 #include "SpellMgr.h"
 #include "TemporarySummon.h"
 #include "WorldSession.h"
+#include "Configuration/Config.h"
 
 /*######
 ## go_gilded_brazier (Paladin First Trail quest (9678))
@@ -1170,7 +1171,7 @@ public:
 
         void OnGameEvent(bool start, uint16 eventId) override
         {
-            if (eventId == GAME_EVENT_HOURLY_BELLS && start)
+            if (eventId == GAME_EVENT_HOURLY_BELLS && start && sConfigMgr->GetBoolDefault("HourlyBells", true))
             {
                 time_t time = GameTime::GetGameTime();
                 tm localTm;
