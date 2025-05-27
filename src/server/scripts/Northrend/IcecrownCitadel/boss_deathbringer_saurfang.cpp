@@ -315,9 +315,9 @@ struct boss_deathbringer_saurfang : public BossAI
         instance->SetBossState(DATA_DEATHBRINGER_SAURFANG, IN_PROGRESS);
     }
 
-    void JustDied(Unit* /*killer*/) override
+    void JustDied(Unit* killer) override
     {
-        _JustDied();
+        BossAI::JustDied(killer);
         _dead = true;
         DoCastAOE(SPELL_REMOVE_MARKS_OF_THE_FALLEN_CHAMPION);
         DoCastSelf(SPELL_ACHIEVEMENT, true);
